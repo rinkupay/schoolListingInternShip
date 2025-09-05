@@ -20,7 +20,7 @@ async function getSchools(): Promise<School[]> {
 
 export default async function ShowSchoolsPage() {
   const schools = await getSchools();
-  console.log(schools);
+
 
   return (
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">

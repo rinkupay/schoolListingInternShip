@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import toast from "react-hot-toast";
 import React, { useState } from "react";
 import Loader from "@/components/Loader";
+import Image from "next/image";
 
 const schema = z.object({
   name: z.string().min(3),
@@ -83,7 +84,7 @@ export default function AddSchoolPage() {
           onChange={handlePreview}
           className="w-full cursor-pointer border rounded"
         />
-        {preview && <img src={preview} alt="Preview" className="mt-2 w-32 h-32 object-cover rounded border" />}
+        {preview && <Image src={preview} alt="Preview" className="mt-2 w-32 h-32 object-cover rounded border" />}
 
         <button
           type="submit"
