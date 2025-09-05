@@ -1,5 +1,6 @@
 
-import SchoolCard from "../components/SchoolCard";
+
+import CollegeCard from "@/components/CollegeCard";
 type School = {
   id: number;
   name: string;
@@ -25,8 +26,8 @@ export default async function ShowSchoolsPage() {
   return (
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
       {schools.map((school) => (
-        <SchoolCard
-          key={school.id}
+        <CollegeCard
+          key={school.id }
           image={school.image}
           name={school.name}
           board={school.address}
@@ -34,6 +35,7 @@ export default async function ShowSchoolsPage() {
           area={school.city}
           rating={4}
         />
+   
       ))}
     </div>
   );

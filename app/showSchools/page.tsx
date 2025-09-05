@@ -1,8 +1,8 @@
 "use client"; // make this a client component
 
 import React, { useEffect, useState } from "react";
-import SchoolCard from "../../components/SchoolCard";
 import Loader from "@/components/Loader";
+import CollegeCard from "@/components/CollegeCard";
 
 type School = {
   id: number;
@@ -40,9 +40,10 @@ export default function ShowSchoolsPage() {
 
   return (
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+     
       {schools && schools.map((school) => (
-        <SchoolCard
-          key={school.id}
+        <CollegeCard
+          key={school.id }
           image={school.image}
           name={school.name}
           board={school.address}
